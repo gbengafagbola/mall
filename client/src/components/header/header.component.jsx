@@ -5,7 +5,7 @@ import {createStructuredSelector} from 'reselect';
 import CartIcon from '../cart-icon/cart-icon.component';
 import WishListIcon from '../wishlist-icon/wishlist-icon.component';
 import SearchIcon from '../search-icon/search-icon.component';
-import DesignersMenu from '../designers-menu/designers-menu.component';
+import MobileMenu from '../mobile-menu/mobile-menu.component';
 import UserUnlock from '../user-unlocked/user-unlocked.component';
 import UserLock from '../user-lock/user.lock.component';
 
@@ -22,10 +22,11 @@ import {HeaderContainer, LogoContainer, OptionsContainer, OptionLink, IconsConta
 const Header = ({currentUser, hidden, signOutStart}) => (
   <HeaderContainer>
 
+    <MobileMenu />
+
     <OptionsContainer>
-      <DesignersMenu />
       
-    <OptionLink as='div' to="/shop">COLLECTION</OptionLink>
+      <OptionLink as='div' to="/shop">COLLECTION</OptionLink>
       <OptionLink as='div' to="/shop">SHOP</OptionLink>
       <OptionLink as='div' to="/shop">BLOG</OptionLink>
       {/* <OptionLink to="/shop">CONTACT</OptionLink> */}
