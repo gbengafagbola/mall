@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
-import { Dropdown, Menu, IconX, MenuItem, IconButton, IconRight } from './dropdown-menu.styles';
+import { Dropdown, Menu, IconX, ChevronSvg, MenuItem, IconButton, IconRight } from './dropdown-menu.styles';
 
 function DropdownMenu() {
   const [activeMenu, setActiveMenu] = useState('main');
@@ -39,7 +39,7 @@ function DropdownMenu() {
           <DropdownItem leftIcon={<IconX />}  goToMenu="settings"> SHOP </DropdownItem>
           <DropdownItem leftIcon={<IconX />}  goToMenu="settings">BLOG</DropdownItem>
           {/* <DropdownItem leftIcon={<IconX />}  goToMenu="settings">CONTACTS</DropdownItem> */}
-          <DropdownItem leftIcon={<IconX />}  goToMenu="settings">DESIGNERS</DropdownItem>
+          <DropdownItem leftIcon={<IconX />} rightIcon={<ChevronSvg />} goToMenu="settings">DESIGNERS</DropdownItem>
         </Menu>
 
       </CSSTransition>

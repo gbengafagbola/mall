@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { ReactComponent as LoveSvg } from '../../assets/love.svg';
+import { ReactComponent as Chevron } from '../../assets/chevron.svg';
 
 
 export const Dropdown = styled.div`
@@ -36,6 +37,12 @@ width: 20px;
 height: 20px;
 `;
 
+export const ChevronSvg = styled(Chevron)`
+// fill: var(--text-color);
+width: 12px;
+height: 12px;
+`;
+
 export const Menu = styled.div`
   width: 80%;
   padding-top: 0px;
@@ -60,7 +67,7 @@ export const IconButton = styled.span`
 `;
 
 export const IconRight = styled.span`
-  margin-left: auto;
+  margin-left: 11px;
 }
 `;
 
