@@ -26,10 +26,10 @@ const Header = ({currentUser, hidden, signOutStart}) => (
 
     <OptionsContainer>
       
-      <OptionLink as='div' to="/shop">COLLECTION</OptionLink>
       <OptionLink as='div' to="/shop">SHOP</OptionLink>
       <OptionLink as='div' to="/shop">BLOG</OptionLink>
-      {/* <OptionLink to="/shop">CONTACT</OptionLink> */}
+      <OptionLink as='div' to="/shop">DESIGNERS</OptionLink>
+
 
     </OptionsContainer>
 

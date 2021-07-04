@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {MenuContainer, Icon,  } from './mobile-menu.styles';
-import DropdownMenu from '../Dropdown-Menu/dropdown-menu';
+import DropdownMenu from '../dropdown-menu/dropdown-menu';
 
 const MobileMenu = () => (
   <MenuContainer>

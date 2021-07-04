@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { ReactComponent as MenuSvg } from '../../assets/menu.svg';
 
 export const MenuContainer = styled.div`
-// display: none;
+display: none;
 
 @media (max-width: 800px) {
   width: 45px;

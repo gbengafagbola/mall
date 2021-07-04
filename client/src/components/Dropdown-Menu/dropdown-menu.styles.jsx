@@ -23,6 +23,7 @@ export const Dropdown = styled.div`
   // padding: 20px;
   // border: 1px solid black;
   background-color: white;
+  padding-top: 0px;
   top: 90px;
   left: 100px;
   z-index: 5;
@@ -37,7 +38,8 @@ height: 20px;
 
 export const Menu = styled.div`
   width: 80%;
-  padding-bottom: 12px;
+  padding-top: 0px;
+  padding-bottom: 13px;
 }
 `;
 

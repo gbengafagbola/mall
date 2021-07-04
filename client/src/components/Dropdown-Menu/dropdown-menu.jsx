@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
-import { Dropdown, Menu, IconX, MenuItem, IconButton, IconRight, MenuPrimary } from './dropdown-menu.styles';
-
-import './dropdown-menu.styles';
+import { Dropdown, Menu, IconX, MenuItem, IconButton, IconRight } from './dropdown-menu.styles';
 
 function DropdownMenu() {
   const [activeMenu, setActiveMenu] = useState('main');
@@ -38,11 +36,10 @@ function DropdownMenu() {
  
         <Menu>
           {/* <DropdownItem>My Profile</DropdownItem> */}
-          <DropdownItem leftIcon={<IconX />}  goToMenu="animals"> SHOP </DropdownItem>
+          <DropdownItem leftIcon={<IconX />}  goToMenu="settings"> SHOP </DropdownItem>
           <DropdownItem leftIcon={<IconX />}  goToMenu="settings">BLOG</DropdownItem>
+          {/* <DropdownItem leftIcon={<IconX />}  goToMenu="settings">CONTACTS</DropdownItem> */}
           <DropdownItem leftIcon={<IconX />}  goToMenu="settings">DESIGNERS</DropdownItem>
-          <DropdownItem leftIcon={<IconX />}  goToMenu="settings">COLLECTIONS</DropdownItem>
-
         </Menu>
 
       </CSSTransition>
@@ -52,7 +49,7 @@ function DropdownMenu() {
    
         <Menu>
           <DropdownItem goToMenu="main" leftIcon={<IconX />}>
-            <h2>My Tutorial</h2>
+            <h2>Designers</h2>
           </DropdownItem>
           <DropdownItem leftIcon={<IconX />}>HTML</DropdownItem>
           <DropdownItem leftIcon={<IconX />}>CSS</DropdownItem>
@@ -62,18 +59,6 @@ function DropdownMenu() {
 
       </CSSTransition>
 
-
-      <CSSTransition in={activeMenu === 'animals'} timeout={500} classNames="menu-secondary" unmountOnExit onEnter={calcHeight}>
-      
-        <Menu>
-          <DropdownItem goToMenu="main" leftIcon={<IconX />}> <h2>Animals</h2> </DropdownItem>
-          <DropdownItem leftIcon="🦘">Kangaroo</DropdownItem>
-          <DropdownItem leftIcon="🐸">Frog</DropdownItem>
-          <DropdownItem leftIcon="🦋">Horse?</DropdownItem>
-          <DropdownItem leftIcon="🦔">Hedgehog</DropdownItem>
-        </Menu>
-
-      </CSSTransition>
     </Dropdown>
   );
 }
