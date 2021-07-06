@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
-import { ReactComponent as LoveSvg } from '../../assets/love.svg';
+import { ReactComponent as ShopSvg } from '../../assets/shop.svg';
 import { ReactComponent as Chevron } from '../../assets/chevron.svg';
+import { ReactComponent as BlogSvg } from '../../assets/blog.svg';
+import { ReactComponent as CameraSvg } from '../../assets/camera.svg';
+import { ReactComponent as DesignerSvg } from '../../assets/designer.svg';
 
 
 export const Dropdown = styled.div`
@@ -25,20 +28,33 @@ export const Dropdown = styled.div`
   // border: 1px solid black;
   background-color: white;
   padding-top: 0px;
-  top: 90px;
-  left: 100px;
+  top: 70px;
+  left: 75px;
   z-index: 5;
 }
 `;
 
-export const IconX = styled(LoveSvg)`
-fill: var(--text-color);
+export const Blog = styled(BlogSvg)`
+width: 20px;
+height: 20px;
+`;
+
+export const Camera = styled(CameraSvg)`
+width: 20px;
+height: 20px;
+`;
+
+export const Designer = styled(DesignerSvg)`
+width: 20px;
+height: 20px;
+`;
+
+export const Shop = styled(ShopSvg)`
 width: 20px;
 height: 20px;
 `;
 
 export const ChevronSvg = styled(Chevron)`
-// fill: var(--text-color);
 width: 12px;
 height: 12px;
 `;

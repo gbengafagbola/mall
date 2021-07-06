@@ -1,6 +1,6 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {createStructuredSelector} from 'reselect';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
 import CartIcon from '../cart-icon/cart-icon.component';
 import WishListIcon from '../wishlist-icon/wishlist-icon.component';
@@ -10,13 +10,13 @@ import UserUnlock from '../user-unlocked/user-unlocked.component';
 import UserLock from '../user-lock/user.lock.component';
 
 import Cart from '../cart/cart.component';
-import {selectCartHidden} from '../../redux/cart/cart.selectors';
-import {selectCurrentUser} from '../../redux/user/user.selectors';
+import { selectCartHidden } from '../../redux/cart/cart.selectors';
+import { selectCurrentUser } from '../../redux/user/user.selectors';
 import { signOutStart } from '../../redux/user/user.actions';
 
-import  {ReactComponent as Logo} from '../../assets/crown.svg';
+import  { ReactComponent as Logo } from '../../assets/crown.svg';
 
-import {HeaderContainer, LogoContainer, OptionsContainer, OptionLink, IconsContainer} from './header.styles';
+import { HeaderContainer, LogoContainer, OptionsContainer, OptionLink, IconsContainer, MoreSvg} from './header.styles';
 
  
 const Header = ({currentUser, hidden, signOutStart}) => (
@@ -40,19 +40,23 @@ const Header = ({currentUser, hidden, signOutStart}) => (
     <IconsContainer>
 
       <SearchIcon />
-      {
+      {/* {
         currentUser ? (
         <OptionLink onClick={signOutStart}><UserUnlock/></OptionLink>
         ) : (
         <OptionLink to='/signin'><UserLock/></OptionLink>
         )
-      }
+      } */}
       <WishListIcon />
       <CartIcon />
+      <MoreSvg />
+
+      {hidden ? null : <Cart />}
 
     </IconsContainer>
 
-    {hidden ? null : <Cart />}
+
+    
   </HeaderContainer>
 );
 

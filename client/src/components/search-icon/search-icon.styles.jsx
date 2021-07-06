@@ -10,6 +10,10 @@ export const SearchContainer = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
+  @media screen and (max-width: 800px){
+    display: none;
+  }
 `;
 
 export const Icon = styled(SearchSvg)`

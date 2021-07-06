@@ -6,8 +6,8 @@ export const MenuContainer = styled.div`
 display: none;
 
 @media (max-width: 800px) {
-  width: 45px;
-  height: 45px;
+  width: 42px;
+  height: 42px;
   position: relative;
   display: flex;
   align-items: center;

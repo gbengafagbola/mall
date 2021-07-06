@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
-import { Dropdown, Menu, IconX, ChevronSvg, MenuItem, IconButton, IconRight } from './dropdown-menu.styles';
+import { Dropdown, Menu, Shop, ChevronSvg, MenuItem, IconButton, IconRight, Camera, Designer } from './dropdown-menu.styles';
 
 function DropdownMenu() {
   const [activeMenu, setActiveMenu] = useState('main');
@@ -36,10 +36,10 @@ function DropdownMenu() {
  
         <Menu>
           {/* <DropdownItem>My Profile</DropdownItem> */}
-          <DropdownItem leftIcon={<IconX />}  goToMenu="settings"> SHOP </DropdownItem>
-          <DropdownItem leftIcon={<IconX />}  goToMenu="settings">BLOG</DropdownItem>
-          {/* <DropdownItem leftIcon={<IconX />}  goToMenu="settings">CONTACTS</DropdownItem> */}
-          <DropdownItem leftIcon={<IconX />} rightIcon={<ChevronSvg />} goToMenu="settings">DESIGNERS</DropdownItem>
+          <DropdownItem leftIcon={<Shop />}  goToMenu="settings"> shop </DropdownItem>
+          <DropdownItem leftIcon={<Camera />}  goToMenu="settings">blog</DropdownItem>
+          {/* <DropdownItem leftIcon={<Shop />}  goToMenu="settings">CONTACTS</DropdownItem> */}
+          <DropdownItem leftIcon={<Designer />} rightIcon={<ChevronSvg />} goToMenu="settings">designer</DropdownItem>
         </Menu>
 
       </CSSTransition>
@@ -48,13 +48,13 @@ function DropdownMenu() {
       <CSSTransition in={activeMenu === 'settings'} timeout={500} classNames="menu-secondary" unmountOnExit onEnter={calcHeight}>
    
         <Menu>
-          <DropdownItem goToMenu="main" leftIcon={<IconX />}>
+          <DropdownItem goToMenu="main" leftIcon={<Shop />}>
             <h2>Designers</h2>
           </DropdownItem>
-          <DropdownItem leftIcon={<IconX />}>HTML</DropdownItem>
-          <DropdownItem leftIcon={<IconX />}>CSS</DropdownItem>
-          <DropdownItem leftIcon={<IconX />}>JavaScript</DropdownItem>
-          <DropdownItem leftIcon={<IconX />}>Awesome!</DropdownItem>
+          <DropdownItem leftIcon={<Shop />}>HTML</DropdownItem>
+          <DropdownItem leftIcon={<Shop />}>CSS</DropdownItem>
+          <DropdownItem leftIcon={<Shop />}>JavaScript</DropdownItem>
+          <DropdownItem leftIcon={<Shop />}>Awesome!</DropdownItem>
         </Menu>
 
       </CSSTransition>
