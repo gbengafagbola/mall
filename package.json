@@ -20,6 +20,8 @@
     "cors": "2.8.5",
     "dotenv": "7.0.0",
     "express": "^4.16.4",
+    "react-icons": "^4.2.0",
+    "react-spring": "^9.0.0-rc.3",
     "react-transition-group": "^4.4.2",
     "stripe": "6.28.0"
   },

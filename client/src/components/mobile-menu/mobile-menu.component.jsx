@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import {useSpring, animted} from 'react-spring';
+
 import {MenuContainer, Icon,  } from './mobile-menu.styles';
 import DropdownMenu from '../dropdown-menu/dropdown-menu';
+import { Modal } from '../modal/modal.component';
 
 const MobileMenu = () => (
   <MenuContainer>
@@ -30,3 +33,4 @@ function NavItem(props) {
 
 
 export default MobileMenu;
+

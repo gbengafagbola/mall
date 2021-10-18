@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-import  { ReactComponent as More } from '../../assets/more.svg';
 import {Link} from 'react-router-dom';
 
 export const HeaderContainer = styled.div`
@@ -13,7 +12,10 @@ export const HeaderContainer = styled.div`
   @media screen and (max-width: 800px) {
     height: 60px;
     padding: 10px;
-    margin-botttom: 20px;
+    padding-top: 20px;
+    display: flex;
+    margin-botttom: 5px;
+    // position: fixed;
   }
 `;
 
@@ -22,10 +24,16 @@ export const LogoContainer = styled(Link)`
   width: 70px;
   padding: 25px;
   align-items: center;
+
   @media screen and (max-width: 800px) {
+    height: 100%;
     width: 50px;
     padding-top: 0px;
+    padding-left: auto;
+    padding-right: auto;
+    justify-items: center;
     align-items: center;
+  
   }
 `;
 
@@ -50,15 +58,10 @@ export const IconsContainer = styled.div`
   justify-content: flex-end;
 
   @media screen and (max-width: 800px){
-    padding-left: 0px;
-    padding-right: 0px;
+    padding: 0px;
   }
 `;
 
-export const MoreSvg = styled(More)`
-width: 28px;
-height: 21px;
-`;
 
 export const OptionLink = styled(Link)`
   padding: 10px 15px;

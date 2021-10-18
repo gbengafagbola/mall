@@ -6,6 +6,8 @@ import CartIcon from '../cart-icon/cart-icon.component';
 import WishListIcon from '../wishlist-icon/wishlist-icon.component';
 import SearchIcon from '../search-icon/search-icon.component';
 import MobileMenu from '../mobile-menu/mobile-menu.component';
+import MoreSvg from '../more-icon/more-icon.component';
+
 import UserUnlock from '../user-unlocked/user-unlocked.component';
 import UserLock from '../user-lock/user.lock.component';
 
@@ -16,21 +18,19 @@ import { signOutStart } from '../../redux/user/user.actions';
 
 import  { ReactComponent as Logo } from '../../assets/crown.svg';
 
-import { HeaderContainer, LogoContainer, OptionsContainer, OptionLink, IconsContainer, MoreSvg} from './header.styles';
+import { HeaderContainer, LogoContainer, OptionsContainer, OptionLink, IconsContainer} from './header.styles';
 
  
 const Header = ({currentUser, hidden, signOutStart}) => (
+
   <HeaderContainer>
 
     <MobileMenu />
 
     <OptionsContainer>
-      
       <OptionLink as='div' to="/shop">SHOP</OptionLink>
       <OptionLink as='div' to="/shop">BLOG</OptionLink>
       <OptionLink as='div' to="/shop">DESIGNERS</OptionLink>
-
-
     </OptionsContainer>
 
     <LogoContainer to="/">
@@ -38,18 +38,17 @@ const Header = ({currentUser, hidden, signOutStart}) => (
     </LogoContainer>
 
     <IconsContainer>
-
       <SearchIcon />
-      {/* {
+      {
         currentUser ? (
         <OptionLink onClick={signOutStart}><UserUnlock/></OptionLink>
         ) : (
         <OptionLink to='/signin'><UserLock/></OptionLink>
         )
-      } */}
+      }
       <WishListIcon />
       <CartIcon />
-      <MoreSvg />
+      {/* <MoreSvg /> */}
 
       {hidden ? null : <Cart />}
 
